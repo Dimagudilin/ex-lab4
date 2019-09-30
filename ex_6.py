@@ -7,11 +7,12 @@ from librip.gens import field, gen_random
 from librip.iterators import Unique
 
 path = "data_light.json"
-
+import json
+import sys
 # Здесь необходимо в переменную path получить
 # путь до файла, который был передан при запуске
 
-with open(path) as f:
+with open(path, encoding="utf8") as f:
     data = json.load(f)
 
 
