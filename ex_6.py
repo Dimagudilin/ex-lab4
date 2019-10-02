@@ -3,7 +3,7 @@ import json
 import sys
 from librip.ctxmngrs import timer
 from librip.decorators import print_result
-from librip.gens import field, gen_random
+from librip.gen import field, gen_random
 from librip.iterators import Unique
 
 path = "data_light.json"

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-from librip.gens import field
-from librip.gens import gen_random
+from librip.gen import field
+from librip.gen import gen_random
 
 goods = [
     {'title': 'Ковер', 'price': 2000, 'color': 'green'},
