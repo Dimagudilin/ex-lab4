@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
 import json
 import sys
-from librip.ctxmngrs import timer
+from librip.сontextmanager import timer
 from librip.decorators import print_result
 from librip.gen import field, gen_random
 from librip.iterators import Unique

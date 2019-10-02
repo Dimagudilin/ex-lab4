@@ -1,5 +1,5 @@
 from time import sleep
-from librip.ctxmngrs import timer
+from librip.сontextmanager import timer
 
 with timer():
     sleep(5.5)

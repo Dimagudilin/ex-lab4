@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from librip.gen import gen_random
 from librip.iterators import Unique
 # Реализация задания 2
