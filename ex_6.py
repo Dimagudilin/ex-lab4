@@ -12,7 +12,7 @@ import sys
 # Здесь необходимо в переменную path получить
 # путь до файла, который был передан при запуске
 
-with open(path, encoding="utf8") as f:
+with open(path, encoding="utf8") as f: #Без кодировки не работает
     data = json.load(f)
 
 

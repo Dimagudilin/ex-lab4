@@ -35,20 +35,20 @@
 # test_4
 # 1
 # 2
-def print_result(fn):
-    def inside(*args):
-        print(fn.__name__)
-        if len(args) == 0:
+def print_result(fn): #Получаем функцию
+    def inside(*args): #Получаем аргументы
+        print(fn.__name__) #Выводим название функции
+        if len(args) == 0: #Для вызова функции без аргументов
             fun = fn()
-        else:
+        else: #Дле нескольких аргументов
             fun = fn(args[0])
-        if type(fun) == list:
+        if type(fun) == list: #Если список
             for i in fun:
                 print(i)
-        elif type(fun) == dict:
+        elif type(fun) == dict: #Если словарь
             for i in fun:
                 print(i, "=", fun[i])
         else:
-            print(fun)
+            print(fun) #Иначе выводим функцию
         return fun
     return inside

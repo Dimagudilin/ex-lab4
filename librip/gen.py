@@ -2,16 +2,16 @@ import random
 
 def field(items, *args):
     assert len(args) > 0    # Проверка на ошибку
-    if len(args) == 1:
+    if len(args) == 1: #Если передан один аргумент
         for i in items:
             for a in args:
                 yield i[a]
-    else:
+    else: # Для нескольких аргументов
         for i in items:  # Для каждого словаря
             dict = {}  # Создаем новый словарь
             for arg in args:
                 if arg in i is not None:
-                    dict[arg] = i[arg]  # Новый словарь
+                    dict[arg] = i[arg]  # Заполняем словарь
             if len(dict) > 0 and len(args) > 1:
                 yield dict
 

@@ -10,7 +10,7 @@ def test_1():
 
 @print_result
 def test_2():
-    return 'iu'
+    return 'рт'
 
 
 @print_result

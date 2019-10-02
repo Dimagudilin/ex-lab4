@@ -4,12 +4,12 @@ class Unique(object):
     IGNORE_CASE = False
     INDEX = 0
     OBJECTS = []
-    PUSTOTA = []
+    VOID = []
 
     def __init__(self, items, **kwargs):
-        if 'ignore_case' in kwargs.keys():
+        if 'ignore_case' in kwargs.keys(): #Проверка на регистр
             self.IGNORE_CASE = kwargs['ignore_case']
-        if type(items == GeneratorType):
+        if type(items == GeneratorType): #Для генератора
             self.OBJECTS = list(items)
         else:
             self.OBJECTS = items
@@ -23,13 +23,13 @@ class Unique(object):
 
             val = self.OBJECTS[self.INDEX]
             val2 = str(val).lower()
-            if self.IGNORE_CASE:
+            if self.IGNORE_CASE: #Если регистр игнорируется, то ставим второе значение
                 val = val2
-            if val not in self.PUSTOTA:
-                self.PUSTOTA.append(val)
+            if val not in self.VOID: #Если не находится значение в списке, туда его добавляем
+                self.VOID.append(val)
                 return val
 
-    def __iter__(self):
-        del self.PUSTOTA[:]
+    def __iter__(self): #Возвращает итератор для объекта
+        del self.VOID[:]
         self.INDEX = -1
         return self

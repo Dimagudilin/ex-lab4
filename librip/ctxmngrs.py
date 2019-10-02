@@ -10,8 +10,8 @@ import time
 
 class timer:
     def __enter__(self):
-        self.start = time.time()
+        self.start = time.time() #Начало подсчета
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        ti = (time.time()) - self.start
+        ti = (time.time()) - self.start #Получаем общее время как время- время начала
         print(ti)
